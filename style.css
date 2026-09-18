@@ -1,0 +1,129 @@
+/* Modern Minimalist CSS */
+
+:root {
+  --font-main: "Inter", Arial, sans-serif;
+  --color-bg: #fff;
+  --color-text: #222;
+  --color-accent: #007aff;
+  --border-radius: 8px;
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: #005bb5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin: 1.2em 0 0.5em 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0 0 1.2em 0;
+}
+
+ul,
+ol {
+  margin: 0 0 1.2em 1.5em;
+  padding: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid #e0e0e0;
+  padding: 0.6em 1em;
+  background: #fafafa;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+button {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+button:hover,
+button:focus {
+  background: #005bb5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  display: block;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2em 0;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+  .container {
+    padding: 1em 0.5em;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav li{
+    display: inline-flex;
+}
+
+#introduction img {
+  display: block;
+  margin: 0 auto 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  position: fixed;
+}
