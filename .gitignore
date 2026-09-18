@@ -1,1 +1,8 @@
 .vscode/settings.json
+
+# Future drafts and private review material stay local until explicitly approved.
+future/
+
+# Local editor and operating-system files.
+.DS_Store
+Thumbs.db
