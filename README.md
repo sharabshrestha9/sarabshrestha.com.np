@@ -1,57 +1,27 @@
-# Sharab Shrestha - Portfolio Website
+# Sharab Shrestha — Portfolio
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Built With](https://img.shields.io/badge/Built%20With-HTML5-orange)](#)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-June%202024-blue)](#)
+Minimal personal portfolio for [sarabshrestha.com.np](https://sarabshrestha.com.np).
 
-Welcome to my personal portfolio site, showcasing my journey as a web developer and storyteller from Nepal.
+## Public pages
 
-This is a simple HTML-only website built without CSS or JavaScript at this stage. It features my original fictional stories, along with my ongoing and future web development projects.
+- `index.html` — homepage and calculator
+- `projects.html` — selected projects
+- `about.html` — short profile
+- `contact.html` — mailto-based contact form
+- `404.html` — fallback page for GitHub Pages
 
----
+The site uses only local HTML, CSS, and JavaScript. It does not include analytics,
+chat embeds, external fonts, or a third-party form backend.
 
-## 📑 Table of Contents
+## Local development
 
-- [🌐 Live Site](#-live-site)
-- [✍️ Author](#%EF%B8%8F-author)
-- [📁 Directory Structure](#-directory-structure)
-- [🤝 Contributors](#-contributors)
-- [🎯 Future Goals](#-future-goals)
-- [📄 License](#-license)
+Serve this folder with any static web server, for example:
 
----
+```bash
+python3 -m http.server
+```
 
-## 🌐 Live Site
+## Future work
 
-👉 Visit the live website: [sarabshrestha.com.np](https://sarabshrestha.com.np)
-
----
-
-## ✍️ Author
-
-**Sharab Shrestha**
-Learner • Storyteller • Web Developer
-📍 Nepal
-📫 [info@sarabshrestha.com.np](mailto:info@sarabshrestha.com.np)
-
----
-
-## 🤝 Contributors
-
-| Name            | Role                       |
-| --------------- | -------------------------- |
-| Sharab Shrestha | Creator, Writer, Developer |
-
----
-
-## 🎯 Future Goals
-
-- [ ] Launch “Story 1” with character bios and world-building
-- [ ] Implement a clean CSS design for a more engaging experience
-- [ ] Expand the site into a full-featured, interactive portfolio
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+Drafts and unapproved legacy material are kept under `future/` and ignored by
+Git. Review them before publishing anything from that folder.
