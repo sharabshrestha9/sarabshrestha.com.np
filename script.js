@@ -18,7 +18,8 @@ function calculate() {
       const operator = operators.pop();
       const right = values.pop();
       const left = values.pop();
-      if (operator === undefined || left === undefined || right === undefined) throw new Error("Invalid expression");
+      if (operator === undefined || left === undefined || right === undefined)
+        throw new Error("Invalid expression");
       if (operator === "+") values.push(left + right);
       if (operator === "-") values.push(left - right);
       if (operator === "*") values.push(left * right);
@@ -32,7 +33,12 @@ function calculate() {
         while (operators.at(-1) !== "(") apply();
         operators.pop();
       } else {
-        while (operators.length && operators.at(-1) !== "(" && precedence[operators.at(-1)] >= precedence[token]) apply();
+        while (
+          operators.length &&
+          operators.at(-1) !== "(" &&
+          precedence[operators.at(-1)] >= precedence[token]
+        )
+          apply();
         operators.push(token);
       }
     });
@@ -48,21 +54,27 @@ function calculate() {
   }
 }
 
-document.querySelector(".calculator-keys").addEventListener("click", (event) => {
-  const button = event.target.closest("button");
-  if (!button) return;
-  const { value, action } = button.dataset;
-  if (action === "clear") expression = "";
-  else if (action === "equals") calculate();
-  else if (value === "±" && expression) expression = expression.startsWith("0-(") ? expression.slice(3, -1) : `0-(${expression})`;
-  else if (value === "%" && expression) expression = String(Number(expression) / 100);
-  else {
-    if (justCalculated && /[0-9.]/.test(value)) expression = "";
-    expression += value;
-    justCalculated = false;
-  }
-  render();
-});
+document
+  .querySelector(".calculator-keys")
+  .addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button) return;
+    const { value, action } = button.dataset;
+    if (action === "clear") expression = "";
+    else if (action === "equals") calculate();
+    else if (value === "±" && expression)
+      expression = expression.startsWith("0-(")
+        ? expression.slice(3, -1)
+        : `0-(${expression})`;
+    else if (value === "%" && expression)
+      expression = String(Number(expression) / 100);
+    else {
+      if (justCalculated && /[0-9.]/.test(value)) expression = "";
+      expression += value;
+      justCalculated = false;
+    }
+    render();
+  });
 
 document.addEventListener("keydown", (event) => {
   if (!document.activeElement.closest(".calculator")) return;
