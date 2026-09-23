@@ -86,3 +86,76 @@ document.addEventListener("keydown", (event) => {
   else if (event.key === "Backspace") expression = expression.slice(0, -1);
   render();
 });
+
+const gameBoard = document.querySelector(".game-board");
+const gameStatus = document.querySelector("#game-status");
+const gameReset = document.querySelector("#game-reset");
+
+if (gameBoard && gameStatus && gameReset) {
+  const winningLines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  let board = Array(9).fill("");
+  let currentPlayer = "X";
+  let gameOver = false;
+
+  function updateGameStatus(message = `${currentPlayer}'s turn`) {
+    gameStatus.textContent = message;
+  }
+
+  function resetGame() {
+    board = Array(9).fill("");
+    currentPlayer = "X";
+    gameOver = false;
+    gameBoard.querySelectorAll(".game-cell").forEach((cell) => {
+      cell.textContent = "";
+      cell.dataset.player = "";
+      cell.classList.remove("is-winner");
+      cell.setAttribute("aria-label", "Empty cell");
+      cell.disabled = false;
+    });
+    updateGameStatus();
+  }
+
+  gameBoard.addEventListener("click", (event) => {
+    const cell = event.target.closest(".game-cell");
+    if (!cell || gameOver) return;
+    const index = Number(cell.dataset.cell);
+    if (board[index]) return;
+
+    board[index] = currentPlayer;
+    cell.textContent = currentPlayer;
+    cell.dataset.player = currentPlayer;
+    cell.setAttribute("aria-label", `${currentPlayer}, cell ${index + 1}`);
+
+    const winningLine = winningLines.find((line) =>
+      line.every((position) => board[position] === currentPlayer),
+    );
+    if (winningLine) {
+      gameOver = true;
+      winningLine.forEach((position) => {
+        gameBoard
+          .querySelector(`[data-cell="${position}"]`)
+          .classList.add("is-winner");
+      });
+      updateGameStatus(`${currentPlayer} wins!`);
+      return;
+    }
+    if (board.every(Boolean)) {
+      gameOver = true;
+      updateGameStatus("It's a draw.");
+      return;
+    }
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    updateGameStatus();
+  });
+
+  gameReset.addEventListener("click", resetGame);
+}
