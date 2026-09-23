@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
+      name="description"
+      content="About Sharab Shrestha and the current focus of his learning and web projects."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sarabshrestha.com.np/about.html" />
+    <meta property="og:title" content="About — Sharab Shrestha" />
+    <meta
+      property="og:description"
+      content="Learn more about Sharab Shrestha and the projects he is building."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarabshrestha.com.np/about.html" />
+    <meta
+      property="og:image"
+      content="https://sarabshrestha.com.np/assets/og-image.svg"
+    />
+    <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'"
     />
@@ -14,9 +31,20 @@
   <body>
     <header class="site-header">
       <a class="logo" href="index.html">Sharab<span>.</span></a>
-      <nav>
-        <a href="projects.html">Projects</a><a href="about.html">About</a
-        ><a href="contact.html">Contact</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="site-nav"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <a class="header-mail" href="mailto:sharabshrestha@proton.me"
         >Email me ↗</a
@@ -67,5 +95,6 @@
       <span>© 2026 Sharab Shrestha</span><span>sarabshrestha.com.np</span
       ><a href="index.html">Home ↑</a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
+      name="description"
+      content="Selected projects and experiments from Sharab Shrestha's front-end learning journey."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sarabshrestha.com.np/projects.html" />
+    <meta property="og:title" content="Projects — Sharab Shrestha" />
+    <meta
+      property="og:description"
+      content="Explore selected projects and experiments from Sharab Shrestha."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarabshrestha.com.np/projects.html" />
+    <meta
+      property="og:image"
+      content="https://sarabshrestha.com.np/assets/og-image.svg"
+    />
+    <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'"
     />
@@ -14,9 +31,20 @@
   <body>
     <header class="site-header">
       <a class="logo" href="index.html">Sharab<span>.</span></a>
-      <nav>
-        <a href="projects.html">Projects</a><a href="about.html">About</a
-        ><a href="contact.html">Contact</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="site-nav"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <a class="header-mail" href="mailto:sharabshrestha@proton.me"
         >Email me ↗</a
@@ -78,17 +106,23 @@
             </div>
             <div class="project-arrow">↗</div></a
           >
-          <article class="project">
+          <a
+            class="project"
+            href="https://roadmap.sh/u/sharabshrestha"
+            target="_blank"
+            rel="noopener"
+          >
             <div class="project-number">04</div>
             <div class="project-info">
-              <h3>More experiments</h3>
+              <h3>Learning roadmap <span>↗</span></h3>
               <p>
-                New small tools and prototypes will be added here over time.
+                A public tracker of the skills, tools, and milestones I am working
+                through.
               </p>
-              <span class="tag">In progress</span>
+              <span class="tag">Learning · roadmap.sh</span>
             </div>
-            <div class="project-arrow">—</div>
-          </article>
+            <div class="project-arrow">↗</div>
+          </a>
         </div>
       </section>
     </main>
@@ -102,5 +136,6 @@
         ></span
       ><a href="index.html">Home ↑</a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

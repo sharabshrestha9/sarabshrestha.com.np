@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Page not found — Sharab Shrestha." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://sarabshrestha.com.np/404.html" />
+    <meta property="og:title" content="404 — Sharab Shrestha" />
+    <meta
+      property="og:description"
+      content="The page you requested could not be found."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarabshrestha.com.np/404.html" />
+    <meta
+      property="og:image"
+      content="https://sarabshrestha.com.np/assets/og-image.svg"
+    />
     <title>404 — Sharab Shrestha</title>
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -11,7 +24,17 @@
   <body>
     <header class="site-header">
       <a class="logo" href="index.html">Sharab<span>.</span></a>
-      <nav aria-label="Main navigation">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="site-nav"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -34,5 +57,6 @@
       <span>© 2026 Sharab Shrestha</span><span>sarabshrestha.com.np</span
       ><a href="index.html">Home ↑</a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

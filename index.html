@@ -7,6 +7,19 @@
       name="description"
       content="Sharab Shrestha — personal portfolio and small web experiments."
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sarabshrestha.com.np/" />
+    <meta property="og:title" content="Sharab Shrestha" />
+    <meta
+      property="og:description"
+      content="Personal portfolio and web experiments by Sharab Shrestha."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarabshrestha.com.np/" />
+    <meta
+      property="og:image"
+      content="https://sarabshrestha.com.np/assets/og-image.svg"
+    />
     <title>Sharab Shrestha</title>
     <link rel="icon" href="logo.svg" type="image/svg+xml" />
     <meta
@@ -18,7 +31,17 @@
   <body>
     <header class="site-header">
       <a class="logo" href="#top">Sharab<span>.</span></a>
-      <nav aria-label="Main navigation">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="site-nav"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        Menu
+      </button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -99,18 +122,23 @@
             </div>
             <div class="project-arrow">↗</div>
           </a>
-          <article class="project">
+          <a
+            class="project"
+            href="https://github.com/sharabshrestha9"
+            target="_blank"
+            rel="noopener"
+          >
             <div class="project-number">03</div>
             <div class="project-info">
-              <h3>More small experiments</h3>
+              <h3>GitHub profile <span>↗</span></h3>
               <p>
-                A growing space for tiny tools, prototypes, and ideas. New
-                projects will appear here.
+                A public record of code experiments, learning projects, and small
+                front-end work.
               </p>
-              <span class="tag">In progress</span>
+              <span class="tag">GitHub · Public work</span>
             </div>
-            <div class="project-arrow">—</div>
-          </article>
+            <div class="project-arrow">↗</div>
+          </a>
         </div>
       </section>
 
