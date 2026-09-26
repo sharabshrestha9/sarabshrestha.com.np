@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Sharab Shrestha</title>
+  <desc id="desc">Personal portfolio preview for Sharab Shrestha.</desc>
+  <rect width="1200" height="630" fill="#f8f8f6"/>
+  <rect x="80" y="80" width="1040" height="470" rx="18" fill="#171717"/>
+  <text x="120" y="220" fill="#d7ff58" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="3">SARAB SHRESTHA</text>
+  <text x="120" y="320" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="700" letter-spacing="-4">I make things</text>
+  <text x="120" y="410" fill="#ffffff" font-family="Georgia, serif" font-style="italic" font-size="70" font-weight="400">for the web.</text>
+  <text x="120" y="495" fill="#d3d3cf" font-family="Arial, Helvetica, sans-serif" font-size="30">sarabshrestha.com.np</text>
+</svg>
