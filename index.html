@@ -26,7 +26,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
@@ -105,13 +105,41 @@
               </div>
             </div>
           </article>
+          <article class="project project-featured game-project">
+            <div class="project-number">02</div>
+            <div class="project-info">
+              <h3>Tic-tac-toe</h3>
+              <p>
+                A quick two-player game. Take turns placing X and O, then
+                reset the board for another round.
+              </p>
+              <span class="tag">JavaScript · Two player</span>
+            </div>
+            <div class="tic-tac-toe" aria-label="Tic-tac-toe game">
+              <p class="game-status" id="game-status" aria-live="polite">
+                X's turn
+              </p>
+              <div class="game-board" role="grid" aria-label="Game board">
+                <button class="game-cell" type="button" data-cell="0" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="1" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="2" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="3" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="4" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="5" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="6" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="7" role="gridcell" aria-label="Empty cell"></button>
+                <button class="game-cell" type="button" data-cell="8" role="gridcell" aria-label="Empty cell"></button>
+              </div>
+              <button class="game-reset" type="button" id="game-reset">New game</button>
+            </div>
+          </article>
           <a
             class="project"
             href="https://figma.sarabshrestha.com.np"
             target="_blank"
             rel="noopener"
           >
-            <div class="project-number">02</div>
+            <div class="project-number">03</div>
             <div class="project-info">
               <h3>Figma playground <span>↗</span></h3>
               <p>
@@ -128,7 +156,7 @@
             target="_blank"
             rel="noopener"
           >
-            <div class="project-number">03</div>
+            <div class="project-number">04</div>
             <div class="project-info">
               <h3>GitHub profile <span>↗</span></h3>
               <p>
